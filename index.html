@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#5b4538">
+	<title>Christian Muñoz Aguirre — Perfil académico</title>
+	<style>
+		:root {
+			--ink: #332820;
+			--muted: #76675b;
+			--paper: #f7f2eb;
+			--card: #fffdf9;
+			--brown: #654d3e;
+			--line: #ded2c4;
+			--accent: #a77b56;
+		}
+		* { box-sizing: border-box; }
+		body {
+			margin: 0;
+			min-height: 100vh;
+			padding: 48px 20px;
+			color: var(--ink);
+			background: radial-gradient(ellipse at top, #e8dccd, #c8b29c 78%);
+			font-family: "Times New Roman", Times, serif;
+		}
+		.page { width: min(100%, 920px); margin: 0 auto; }
+		.eyebrow {
+			margin: 0 0 15px;
+			color: #f7eee3;
+			font-size: .76rem;
+			letter-spacing: .22em;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		.card {
+			overflow: hidden;
+			background: var(--card);
+			border: 1px solid rgba(255,255,255,.75);
+			box-shadow: 0 24px 70px rgba(54, 37, 25, .2);
+		}
+		.hero {
+			position: relative;
+			display: grid;
+			grid-template-columns: 220px 1fr;
+			align-items: center;
+			gap: 42px;
+			padding: 55px 64px 48px;
+			background: var(--paper);
+		}
+		.hero::after {
+			position: absolute;
+			right: 0; bottom: 0; left: 0;
+			height: 1px;
+			background: var(--line);
+			content: "";
+		}
+		.portrait-frame {
+			width: 205px;
+			height: 245px;
+			padding: 7px;
+			border: 1px solid #cbb9a5;
+			background: #fffaf3;
+		}
+		.portrait {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center 35%;
+			background: linear-gradient(145deg, #d4b99e, #806653);
+		}
+		.label {
+			margin: 0 0 12px;
+			color: var(--accent);
+			font-size: .75rem;
+			letter-spacing: .18em;
+			text-transform: uppercase;
+		}
+		h1 { margin: 0; font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 400; line-height: 1.04; }
+		.subtitle { margin: 16px 0 0; color: var(--muted); font-size: 1.12rem; font-style: italic; }
+		.intro { max-width: 530px; margin: 23px 0 0; font-size: 1.04rem; line-height: 1.7; }
+		.content { padding: 37px 64px 44px; }
+		.section-heading {
+			display: flex;
+			align-items: center;
+			gap: 14px;
+			margin: 0 0 20px;
+			font-size: 1.35rem;
+			font-weight: 400;
+		}
+		.section-heading::after { height: 1px; flex: 1; background: var(--line); content: ""; }
+		.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px 42px; }
+		.detail { padding: 0 0 20px; border-bottom: 1px solid var(--line); }
+		.detail h3 { margin: 0 0 9px; color: var(--brown); font-size: 1.08rem; font-weight: 400; }
+		.detail p { margin: 0; color: var(--muted); line-height: 1.65; }
+		.contact {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 18px;
+			margin-top: 31px;
+			padding: 17px 20px;
+			border: 1px solid var(--line);
+			background: #fbf8f3;
+		}
+		.contact-label { display: block; margin-bottom: 5px; color: var(--muted); font-size: .85rem; }
+		.contact a { color: var(--brown); overflow-wrap: anywhere; text-decoration-color: #bca58e; text-underline-offset: 3px; }
+		button {
+			flex: 0 0 auto;
+			padding: 9px 14px;
+			border: 1px solid var(--brown);
+			color: var(--brown);
+			background: transparent;
+			font: inherit;
+			cursor: pointer;
+			transition: color .2s, background .2s;
+		}
+		button:hover, button:focus-visible { color: white; background: var(--brown); }
+		.footer { padding: 0 64px 28px; color: #958477; font-size: .86rem; text-align: center; }
+		@media (max-width: 640px) {
+			body { padding: 24px 12px; }
+			.hero { grid-template-columns: 1fr; justify-items: center; gap: 25px; padding: 34px 25px; text-align: center; }
+			.portrait-frame { width: 168px; height: 195px; }
+			.intro { margin-top: 17px; }
+			.content { padding: 30px 25px 32px; }
+			.grid { grid-template-columns: 1fr; gap: 18px; }
+			.contact { align-items: flex-start; flex-direction: column; }
+			.footer { padding: 0 20px 24px; }
+		}
+	</style>
+</head>
+<body>
+	<main class="page">
+		<p class="eyebrow">Tarjeta digital · Perfil académico</p>
+		<article class="card">
+			<header class="hero">
+				<div class="portrait-frame">
+					<img class="portrait" src="foto.jpg" alt="Retrato de perfil de Christian Muñoz Aguirre">
+				</div>
+				<div>
+					<p class="label">Estudiante</p>
+					<h1>Christian<br>Muñoz Aguirre</h1>
+					<p class="subtitle">Curiosidad, aprendizaje, nuevas ideas y creatividad en la musica.</p>
+					<p class="intro">Mi nombre es Christian Muñoz Aguirre, soy un estudiante interesado en descubrir cómo la tecnología y la musica pueden aportar soluciones creativas y útiles. Me motiva aprender, asumir nuevos retos, construir un camino académico con propósito y un proyecto a futuro. soy una persona reservada, poco social, pero con muchas metas que quiero cumplir en el camino.</p>
+				</div>
+			</header>
+
+			<section class="content" aria-labelledby="intereses">
+				<h2 class="section-heading" id="intereses">Mi perfil</h2>
+				<div class="grid">
+					<section class="detail">
+						<h3>Aspiraciones educativas</h3>
+						<p>Continuar mi formación, fortalecer mis conocimientos y prepararme para aportar de manera positiva a mi futuro profesional, como en el tema de la musica, para hacer mis propias canciones de eletronica, me gustaria seguirlos en una academia de buga o cali.</p>
+					</section>
+					<section class="detail">
+						<h3>Intereses tecnológicos</h3>
+						<p>Me llaman la atención la programación, la inteligencia artificial, el diseño digital y la música (al igual que algunos instrumentos para crearla ).</p>
+					</section>
+					<section class="detail">
+						<h3>Áreas de estudio</h3>
+						<p>Exploro áreas como informática, ciencias, innovación, pensamiento lógico, y temas relacionados con la musica, con el interés en seguir descubriendo dónde puedo desarrollar mejor mis habilidades.</p>
+					</section>
+					<section class="detail">
+						<h3>Otros intereses</h3>
+						<p>Disfruto aprender temas nuevos, compartir ideas, trabajar en equipo y dedicar tiempo a actividades que estimulen la creatividad y el crecimiento personal.</p>
+					</section>
+				</div>
+				<div class="contact">
+					<div>
+						<span class="contact-label">Correo institucional</span>
+						<a href="mailto:christian.munoz@iegimnasiodelcalima.edu.co">christian.munoz@iegimnasiodelcalima.edu.co</a>
+					</div>
+					<button type="button" id="copyEmail" aria-label="Copiar correo institucional">Copiar correo</button>
+				</div>
+			</section>
+			<footer class="footer">Una presentación de mi camino académico.</footer>
+		</article>
+	</main>
+	<script>
+		const copyButton = document.querySelector('#copyEmail');
+		const email = 'christian.munoz@iegimnasiodelcalima.edu.co';
+
+		copyButton.addEventListener('click', async () => {
+			try {
+				await navigator.clipboard.writeText(email);
+				copyButton.textContent = 'Correo copiado';
+			} catch {
+				window.location.href = `mailto:${email}`;
+			}
+			window.setTimeout(() => { copyButton.textContent = 'Copiar correo'; }, 2200);
+		});
+	</script>
+</body>
+</html>
